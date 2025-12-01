@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin
 Disallow: /api/
 
-Sitemap: https://promptzen.vercel.app/sitemap.xml
+Sitemap: https://promptbud.vercel.app/sitemap.xml
