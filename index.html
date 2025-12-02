@@ -3,7 +3,29 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  
+  <!-- SEO Meta Tags -->
   <title>PromptBud — Discover & Share Viral AI Prompts</title>
+  <meta name="description" content="PromptBud is the ultimate platform for discovering, sharing, and managing creative AI prompts. Join our community of prompt engineers and creators.">
+  <meta name="keywords" content="AI prompts, ChatGPT, Midjourney, DALL-E, Stable Diffusion, prompt engineering, AI art, AI tools">
+  <meta name="author" content="Code Ronins">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://promptbud.vercel.app/">
+  <meta property="og:title" content="PromptBud — Discover & Share Viral AI Prompts">
+  <meta property="og:description" content="Discover, submit, and manage creative AI prompts. Join a community of prompt engineers and creators pushing the boundaries of what's possible.">
+  <meta property="og:image" content="https://promptbud.vercel.app/og-image.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://promptbud.vercel.app/">
+  <meta property="twitter:title" content="PromptBud — Discover & Share Viral AI Prompts">
+  <meta property="twitter:description" content="Discover, submit, and manage creative AI prompts. Join a community of prompt engineers and creators pushing the boundaries of what's possible.">
+  <meta property="twitter:image" content="https://promptbud.vercel.app/og-image.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -732,6 +754,25 @@
     .footer-content a:hover {
       color: var(--hover-purple);
     }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      font-size: 14px;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    .footer-links a:hover {
+      background: var(--accent-2);
+      color: var(--accent);
+    }
     .made-with-love {
       margin-top: 20px;
       font-size: 16px;
@@ -1183,6 +1224,11 @@
       .footer-content {
         padding: 0 20px;
       }
+      .footer-links {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+      }
       .star-placer-controls {
         bottom: 10px;
         right: 10px;
@@ -1282,7 +1328,7 @@
           </svg>
         </div>
         <div>
-          <h1>PromptZen</h1>
+          <h1>PromptBud</h1>
           <div class="brand-sub">By Code Ronins</div>
         </div>
       </div>
@@ -1358,7 +1404,11 @@
   <!-- Footer -->
   <footer>
     <div class="footer-content">
-      <div>© 2025 PromptZen — by <a href="https://coderonins.vercel.app" target="_blank">Code Ronins</a></div>
+      <div>© 2025 PromptBud — by <a href="https://coderonins.vercel.app" target="_blank">Code Ronins</a></div>
+      <div class="footer-links">
+        <a href="#" onclick="openTermsModal()">Terms & Conditions</a>
+        <a href="#" onclick="openPrivacyModal()">Privacy Policy</a>
+      </div>
       <div class="made-with-love">Made with ♥</div>
     </div>
   </footer>
@@ -1468,17 +1518,17 @@
   <!-- About Page Modal -->
   <div id="modalAbout" class="modal-page">
     <div class="modal-page-header">
-      <h2 style="font-family:'Space Grotesk',sans-serif;margin:0">About PromptZen</h2>
+      <h2 style="font-family:'Space Grotesk',sans-serif;margin:0">About PromptBud</h2>
       <button class="close-modal" onclick="closeModalPage('about')">×</button>
     </div>
     <div class="modal-page-content">
       <div class="about-content">
-        <h2>Welcome to PromptZen</h2>
+        <h2>Welcome to PromptBud</h2>
         <div class="version-badge">Current Version: indev_008.00</div>
         <p>
-          PromptZen is a revolutionary platform designed for AI enthusiasts, prompt engineers, and creative minds 
+          PromptBud is a revolutionary platform designed for AI enthusiasts, prompt engineers, and creative minds 
           to discover, share, and collaborate on the most effective AI prompts. In the rapidly evolving world of 
-          artificial intelligence, the quality of prompts determines the quality of outputs. PromptZen serves as 
+          artificial intelligence, the quality of prompts determines the quality of outputs. PromptBud serves as 
           a centralized hub where the community can contribute their most successful prompts across various AI 
           models including ChatGPT, Midjourney, DALL-E, Stable Diffusion, and more.
         </p>
@@ -1486,7 +1536,7 @@
           Our mission is to democratize access to high-quality AI prompts and foster a community where both 
           beginners and experts can learn from each other. Whether you're looking to generate stunning visual 
           art, craft compelling stories, solve complex problems, or simply explore the capabilities of modern 
-          AI systems, PromptZen provides the tools and community support to help you achieve your creative goals.
+          AI systems, PromptBud provides the tools and community support to help you achieve your creative goals.
         </p>
         <p>
           The platform features a curated gallery of trending prompts, user submission system with admin 
@@ -1567,6 +1617,124 @@
     </div>
   </div>
 
+  <!-- Terms & Conditions Modal -->
+  <div id="modalTerms" class="modal-page">
+    <div class="modal-page-header">
+      <h2 style="font-family:'Space Grotesk',sans-serif;margin:0">Terms & Conditions</h2>
+      <button class="close-modal" onclick="closeModalPage('terms')">×</button>
+    </div>
+    <div class="modal-page-content">
+      <div class="about-content">
+        <h2>Terms & Conditions</h2>
+        <p><strong>Last Updated: December 2025</strong></p>
+        
+        <h3 style="margin-top: 20px;">1. Acceptance of Terms</h3>
+        <p>
+          By accessing and using PromptBud, you accept and agree to be bound by the terms and provision of this agreement. 
+          Additionally, when using this website's particular services, you shall be subject to any posted guidelines or 
+          rules applicable to such services.
+        </p>
+        
+        <h3 style="margin-top: 20px;">2. User Accounts</h3>
+        <p>
+          When you create an account with us, you guarantee that the information you provide is accurate, complete, 
+          and current at all times. You are responsible for safeguarding the password that you use to access the 
+          service and for any activities or actions under your password.
+        </p>
+        
+        <h3 style="margin-top: 20px;">3. Content Policy</h3>
+        <p>
+          Users may submit prompts and images to the platform. By submitting content, you grant PromptBud a 
+          worldwide, non-exclusive, royalty-free license to use, reproduce, adapt, and display such content 
+          on our platform. You retain ownership of your original content.
+        </p>
+        
+        <h3 style="margin-top: 20px;">4. Intellectual Property</h3>
+        <p>
+          The PromptBud platform and its original content, features, and functionality are owned by Code Ronins 
+          and are protected by international copyright, trademark, patent, trade secret, and other intellectual 
+          property or proprietary rights laws.
+        </p>
+        
+        <h3 style="margin-top: 20px;">5. Termination</h3>
+        <p>
+          We may terminate or suspend your account immediately, without prior notice or liability, for any reason 
+          whatsoever, including without limitation if you breach the Terms.
+        </p>
+        
+        <h3 style="margin-top: 20px;">6. Changes to Terms</h3>
+        <p>
+          We reserve the right, at our sole discretion, to modify or replace these Terms at any time. 
+          By continuing to access or use our service after those revisions become effective, you agree to be bound 
+          by the revised terms.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Privacy Policy Modal -->
+  <div id="modalPrivacy" class="modal-page">
+    <div class="modal-page-header">
+      <h2 style="font-family:'Space Grotesk',sans-serif;margin:0">Privacy Policy</h2>
+      <button class="close-modal" onclick="closeModalPage('privacy')">×</button>
+    </div>
+    <div class="modal-page-content">
+      <div class="about-content">
+        <h2>Privacy Policy</h2>
+        <p><strong>Last Updated: December 2025</strong></p>
+        
+        <h3 style="margin-top: 20px;">1. Information We Collect</h3>
+        <p>
+          We collect information that you provide directly to us, including username, email address, 
+          password, and any prompts or images you submit to the platform.
+        </p>
+        
+        <h3 style="margin-top: 20px;">2. How We Use Your Information</h3>
+        <p>
+          We use the information we collect to:
+          <ul style="text-align: left;">
+            <li>Provide, maintain, and improve our services</li>
+            <li>Process transactions and send related information</li>
+            <li>Send you technical notices and support messages</li>
+            <li>Respond to your comments and questions</li>
+            <li>Monitor and analyze trends and usage</li>
+          </ul>
+        </p>
+        
+        <h3 style="margin-top: 20px;">3. Information Sharing</h3>
+        <p>
+          We do not sell, trade, or rent your personal identification information to others. We may share 
+          generic aggregated demographic information not linked to any personal identification information 
+          regarding visitors and users with our business partners and advertisers.
+        </p>
+        
+        <h3 style="margin-top: 20px;">4. Data Security</h3>
+        <p>
+          We implement appropriate security measures to protect against unauthorized access, alteration, 
+          disclosure, or destruction of your personal information and data stored on our platform.
+        </p>
+        
+        <h3 style="margin-top: 20px;">5. Cookies</h3>
+        <p>
+          PromptBud uses cookies to enhance user experience. Your web browser places cookies on your hard drive 
+          for record-keeping purposes and sometimes to track information about them.
+        </p>
+        
+        <h3 style="margin-top: 20px;">6. Your Rights</h3>
+        <p>
+          You have the right to access, correct, or delete your personal information. You can update your 
+          account information through your account settings or contact us directly.
+        </p>
+        
+        <h3 style="margin-top: 20px;">7. Changes to This Policy</h3>
+        <p>
+          We may update our Privacy Policy from time to time. We will notify you of any changes by posting 
+          the new Privacy Policy on this page and updating the "Last Updated" date.
+        </p>
+      </div>
+    </div>
+  </div>
+
   <!-- login modal -->
   <div id="modal" class="modal-backdrop">
     <div class="modal">
@@ -1582,6 +1750,11 @@
           <input id="loginUser" type="text" class="auth-input" placeholder="Enter your username"/>
           <label class="form-label" style="margin-top:16px">Password</label>
           <input id="loginPass" type="password" class="auth-input" placeholder="Enter your password"/>
+          <div id="policyConsent" style="margin-top: 16px; padding: 12px; background: #f8f9fa; border-radius: 8px; font-size: 13px; color: var(--muted);">
+            By logging in, you confirm that you have read and agree to our 
+            <a href="#" onclick="openTermsModal(); return false;">Terms & Conditions</a> and 
+            <a href="#" onclick="openPrivacyModal(); return false;">Privacy Policy</a>.
+          </div>
           <div style="display:flex;gap:8px;margin-top:20px;justify-content:flex-end">
             <button onclick="closeLogin()" class="btn">Cancel</button>
             <button class="btn-primary btn" onclick="doLogin()">Login</button>
@@ -1598,6 +1771,12 @@
           <input id="registerPass" type="password" class="auth-input" placeholder="At least 6 characters"/>
           <div style="font-size: 12px; color: var(--muted); margin-top: 8px;">
             Username must be 3-20 alphanumeric characters. Password must be at least 6 characters.
+          </div>
+          <div id="policyConsentRegister" style="margin-top: 16px; padding: 12px; background: #f8f9fa; border-radius: 8px; font-size: 13px; color: var(--muted);">
+            By registering, you automatically agree to our 
+            <a href="#" onclick="openTermsModal(); return false;">Terms & Conditions</a> and 
+            <a href="#" onclick="openPrivacyModal(); return false;">Privacy Policy</a>.
+            Creating an account constitutes your acceptance of these policies.
           </div>
           <div style="display:flex;gap:8px;margin-top:20px;justify-content:flex-end">
             <button onclick="closeLogin()" class="btn">Cancel</button>
@@ -1661,8 +1840,8 @@
 const BACKEND_BASE = 'https://promptzentester2.vercel.app';
 /* ---------------------------- */
 
-let currentUser = { username:null, role:'user' };
-let authToken = localStorage.getItem('promptzen_token');
+let currentUser = { username:null, role:'user', accepted_policies: false };
+let authToken = localStorage.getItem('promptbud_token');
 let selectedPrompts = new Set();
 let uploadedImageUrl = null;
 let allGalleryPrompts = []; // Store all prompts for search functionality
@@ -1679,10 +1858,11 @@ let tictactoeGameState = {
 
 // Local storage keys
 const STORAGE_KEYS = {
-  PROMPTS: 'promptzen_prompts',
-  USERS: 'promptzen_users',
-  CURRENT_USER: 'promptzen_user',
-  TOKEN: 'promptzen_token'
+  PROMPTS: 'promptbud_prompts',
+  USERS: 'promptbud_users',
+  CURRENT_USER: 'promptbud_user',
+  TOKEN: 'promptbud_token',
+  ACCEPTED_POLICIES: 'promptbud_accepted_policies'
 };
 
 /* ---------- Local Storage Management ---------- */
@@ -1790,6 +1970,7 @@ function openModalPage(page) {
     // About page doesn't need additional loading
   }
 }
+
 function closeModalPage(page) {
   const el = document.getElementById('modal' + capitalize(page));
   if(!el) return;
@@ -1797,6 +1978,22 @@ function closeModalPage(page) {
   document.body.style.overflow = 'auto';
   selectedPrompts.clear();
   updateBulkActions();
+}
+
+// Open Terms & Conditions modal
+function openTermsModal() {
+  const el = document.getElementById('modalTerms');
+  if(!el) return;
+  el.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+// Open Privacy Policy modal
+function openPrivacyModal() {
+  const el = document.getElementById('modalPrivacy');
+  if(!el) return;
+  el.classList.add('active');
+  document.body.style.overflow = 'hidden';
 }
 
 function capitalize(s){ return s.charAt(0).toUpperCase() + s.slice(1); }
@@ -1845,7 +2042,11 @@ async function doRegister(){
     const res = await fetch(BACKEND_BASE + '/api/register', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username: u, password: p })
+      body: JSON.stringify({ 
+        username: u, 
+        password: p,
+        accepted_policies: true // Automatically accept policies on registration
+      })
     });
 
     // Better response handling
@@ -1871,10 +2072,16 @@ async function doRegister(){
     const responseData = await res.json();
     
     if(responseData.access_token) {
-      currentUser = { username: responseData.username, role: responseData.role };
+      currentUser = { 
+        username: responseData.username, 
+        role: responseData.role,
+        accepted_policies: true 
+      };
       setAuthToken(responseData.access_token);
       setLocalStorage(STORAGE_KEYS.CURRENT_USER, currentUser);
-      showToast('Registration successful! You are now logged in.');
+      setLocalStorage(STORAGE_KEYS.ACCEPTED_POLICIES, true);
+      
+      showToast('Registration successful! You have automatically agreed to our Terms & Conditions and Privacy Policy.');
       closeLogin();
       updateAuthUI();
       updateSubmitForm();
@@ -1924,10 +2131,21 @@ async function doLogin(){
     const responseData = await res.json();
     
     if (responseData.access_token) {
-      currentUser = { username: responseData.username, role: responseData.role };
+      currentUser = { 
+        username: responseData.username, 
+        role: responseData.role,
+        accepted_policies: responseData.accepted_policies || getLocalStorage(STORAGE_KEYS.ACCEPTED_POLICIES, false)
+      };
       setAuthToken(responseData.access_token);
       setLocalStorage(STORAGE_KEYS.CURRENT_USER, currentUser);
-      showToast('Login successful!');
+      
+      // Show policy acceptance message if not already accepted
+      if (!currentUser.accepted_policies) {
+        showToast('Welcome back! Please review our Terms & Conditions and Privacy Policy.');
+      } else {
+        showToast('Login successful!');
+      }
+      
       closeLogin();
       updateAuthUI();
       updateSubmitForm();
@@ -1977,7 +2195,7 @@ function updateAuthUI(){
 function logout(){
   localStorage.removeItem(STORAGE_KEYS.CURRENT_USER);
   setAuthToken(null);
-  currentUser = { username:null, role:'user' };
+  currentUser = { username:null, role:'user', accepted_policies: false };
   updateAuthUI();
   updateSubmitForm();
   showToast('Logged out successfully');
@@ -2146,14 +2364,16 @@ function filterGalleryPrompts(searchTerm) {
 /* ---------- Load stored user ---------- */
 (function(){
   // Clear browser storage first to remove any old data
-  localStorage.removeItem('promptzen_prompts');
-  localStorage.removeItem('promptzen_users');
+  localStorage.removeItem('promptbud_prompts');
+  localStorage.removeItem('promptbud_users');
   
   initializeLocalStorage();
   const user = getLocalStorage(STORAGE_KEYS.CURRENT_USER);
   const token = getLocalStorage(STORAGE_KEYS.TOKEN);
+  const acceptedPolicies = getLocalStorage(STORAGE_KEYS.ACCEPTED_POLICIES, false);
+  
   if(user && token){
-    currentUser = user;
+    currentUser = { ...user, accepted_policies: acceptedPolicies };
     authToken = token;
   }
   updateAuthUI();
