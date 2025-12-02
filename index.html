@@ -1,116 +1,12 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Essential Meta Tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  
-  <!-- Primary Meta Tags -->
-  <title>PromptBud — Discover & Share Viral AI Prompts | AI Prompt Marketplace</title>
-  <meta name="title" content="PromptBud — Discover & Share Viral AI Prompts | AI Prompt Marketplace">
-  <meta name="description" content="PromptBud is the ultimate platform for discovering, sharing, and managing AI prompts. Explore trending prompts for ChatGPT, Midjourney, DALL-E, Gemini, and more. Join our community of AI enthusiasts and prompt engineers.">
-  <meta name="keywords" content="AI prompts, ChatGPT prompts, Midjourney prompts, DALL-E prompts, AI prompt marketplace, prompt engineering, AI tools, artificial intelligence, machine learning, stable diffusion, Claude AI">
-  <meta name="author" content="Code Ronins">
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://promptbud.vercel.app/">
-  <meta property="og:title" content="PromptBud — Discover & Share Viral AI Prompts">
-  <meta property="og:description" content="Discover, submit, and manage creative AI prompts. Join a community of prompt engineers pushing the boundaries of AI.">
-  <meta property="og:image" content="https://promptbud.vercel.app/images/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PromptBud - AI Prompt Platform">
-  <meta property="og:site_name" content="PromptBud">
-  
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://promptbud.vercel.app/">
-  <meta property="twitter:title" content="PromptBud — Discover & Share Viral AI Prompts">
-  <meta property="twitter:description" content="Discover, submit, and manage creative AI prompts. Join a community of prompt engineers pushing the boundaries of AI.">
-  <meta property="twitter:image" content="https://promptbud.vercel.app/images/twitter-image.png">
-  
-  <!-- Additional SEO Tags -->
-  <meta name="theme-color" content="#FF7B65">
-  <meta name="color-scheme" content="light">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="PromptBud">
-  
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://promptbud.vercel.app/">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
-  
-  <!-- Structured Data / JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "PromptBud",
-    "url": "https://promptbud.vercel.app/",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Any",
-    "description": "Platform for discovering and sharing AI prompts across multiple AI models including ChatGPT, Midjourney, DALL-E, and more.",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "author": {
-      "@type": "Organization",
-      "name": "Code Ronins",
-      "url": "https://coderonins.vercel.app"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "ratingCount": "1243"
-    }
-  }
-  </script>
-  
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "PromptBud",
-    "url": "https://promptbud.vercel.app/",
-    "logo": "https://promptbud.vercel.app/images/logo.png",
-    "sameAs": [
-      "https://github.com/code-ronins",
-      "https://linkedin.com/company/code-ronins"
-    ]
-  }
-  </script>
-  
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "url": "https://promptbud.vercel.app/",
-    "name": "PromptBud",
-    "description": "AI Prompt Discovery and Sharing Platform",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://promptbud.vercel.app/gallery?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
+  <title>PromptBud — Discover & Share Viral AI Prompts</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  
-  <!-- Preload critical resources -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" as="style">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <style>
     :root{
@@ -143,21 +39,6 @@
       padding-bottom:80px;
     }
 
-    /* Skip to main content for accessibility */
-    .skip-to-main {
-      position: absolute;
-      top: -40px;
-      left: 0;
-      background: var(--accent);
-      color: white;
-      padding: 8px;
-      z-index: 10000;
-      text-decoration: none;
-    }
-    .skip-to-main:focus {
-      top: 0;
-    }
-
     /* top glass nav container (contained, not browser) */
     .topbar-wrap{
       position:sticky; top:0; z-index:999;
@@ -179,7 +60,6 @@
       gap:12px;
       align-items:center;
       cursor: pointer;
-      text-decoration: none;
     }
     .logo .mark{
       width:44px;height:44px;border-radius:10px;
@@ -323,7 +203,7 @@
       transform: translateY(30px);
       animation: fadeInUp 1s ease forwards;
     }
-    .hero h1{
+    .hero h2{
       margin:0;font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:clamp(3rem, 9vw, 6rem);color:#111;
       line-height:1.02;
       word-wrap: break-word;
@@ -410,7 +290,7 @@
       padding: 0 20px;
       text-align: center;
     }
-    .trending-section h2 {
+    .trending-section h3 {
       font-family: 'Space Grotesk', sans-serif;
       font-size: clamp(1.6rem, 3.5vw, 2.2rem);
       margin-bottom: 6px;
@@ -527,7 +407,7 @@
     .card:hover .img img{
       transform: scale(1.08);
     }
-    .card h3{
+    .card h4{
       margin:16px 0 6px;
       font-family:'Space Grotesk',sans-serif;
       color:#333;
@@ -604,7 +484,7 @@
       transform: translateY(-2px);
       box-shadow: 0 6px 20px rgba(164,107,245,0.3);
     }
-    .card:hover h3 { 
+    .card:hover h4 { 
       color:var(--accent-darker); 
     }
 
@@ -691,7 +571,7 @@
       padding: 40px 20px;
       text-align: center;
     }
-    .about-content h1 {
+    .about-content h2 {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 2.5rem;
       margin-bottom: 10px;
@@ -855,22 +735,6 @@
     .made-with-love {
       margin-top: 20px;
       font-size: 16px;
-    }
-
-    /* Breadcrumb for SEO */
-    .breadcrumb {
-      max-width: var(--max-w);
-      margin: 20px auto;
-      padding: 0 20px;
-      font-size: 14px;
-      color: var(--muted);
-    }
-    .breadcrumb a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    .breadcrumb a:hover {
-      text-decoration: underline;
     }
 
     /* small helpers */
@@ -1347,7 +1211,7 @@
         width: 36px;
         height: 36px;
       }
-      .hero h1 {
+      .hero h2 {
         font-size: clamp(1.6rem, 10vw, 2.6rem);
       }
       .hero .subline {
@@ -1379,7 +1243,7 @@
       .admin-stats {
         grid-template-columns: 1fr;
       }
-      .about-content h1 {
+      .about-content h2 {
         font-size: 2rem;
       }
       .about-content p {
@@ -1409,25 +1273,22 @@
 </head>
 <body>
 
-  <!-- Skip to main content for accessibility -->
-  <a href="#main-content" class="skip-to-main">Skip to main content</a>
-
   <div class="topbar-wrap">
     <header>
-      <a href="/" class="logo" id="logo" aria-label="PromptZen Home">
+      <div class="logo" id="logo">
         <div class="mark" aria-hidden="true">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M12 2.5l2.3 4.7 5.2.8-3.8 3.7.9 5.1L12 15.9l-4.6 2.4.9-5.1L4.5 8.0l5.2-.8L12 2.5z"/>
           </svg>
         </div>
         <div>
-          <h1>PromptBud</h1>
+          <h1>PromptZen</h1>
           <div class="brand-sub">By Code Ronins</div>
         </div>
-      </a>
+      </div>
 
       <!-- Desktop Navigation -->
-      <nav class="desktop-nav" aria-label="Main navigation">
+      <nav class="desktop-nav">
         <a id="navHome" class="active" href="#" onclick="navTo('home')">Home</a>
         <a id="navGallery" href="#" onclick="openModalPage('gallery')">Gallery</a>
         <a id="navMy" href="#" onclick="openModalPage('my')">My Prompts</a>
@@ -1437,13 +1298,13 @@
       </nav>
 
       <!-- Mobile Navigation Toggle -->
-      <button class="mobile-nav-toggle" onclick="toggleMobileNav()" aria-label="Toggle mobile navigation" aria-expanded="false" aria-controls="mobileNav">☰</button>
+      <button class="mobile-nav-toggle" onclick="toggleMobileNav()">☰</button>
     </header>
   </div>
 
   <!-- Mobile Navigation Menu -->
-  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
-    <button class="mobile-nav-close" onclick="toggleMobileNav()" aria-label="Close mobile navigation">×</button>
+  <div class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav-close" onclick="toggleMobileNav()">×</button>
     <div class="mobile-nav-links">
       <a id="mobileNavHome" class="active" href="#" onclick="navToMobile('home')">Home</a>
       <a id="mobileNavGallery" href="#" onclick="openModalPageMobile('gallery')">Gallery</a>
@@ -1452,73 +1313,61 @@
       <a id="mobileNavAdmin" href="#" onclick="openModalPageMobile('admin')" style="display:none">Admin</a>
       <a id="mobileNavLogin" href="#" onclick="openLoginMobile()">Login</a>
     </div>
-  </nav>
-
-  <!-- Breadcrumb for SEO -->
-  <div class="breadcrumb" aria-label="Breadcrumb">
-    <span><a href="/">Home</a></span>
   </div>
 
   <!-- HERO (home) -->
-  <main id="main-content">
-    <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero-content">
-        <h1 id="hero-heading"><span style="color:#000">Discover & Share</span><br><span style="display:block;margin-top:8px;color:var(--accent);">AI Prompts</span></h1>
-        <div class="subline">Discover, submit, and manage creative AI prompts. Join a community of prompt engineers and creators pushing the boundaries of what's possible with ChatGPT, Midjourney, DALL-E, Stable Diffusion, and more.</div>
+  <section class="hero">
+    <div class="hero-content">
+      <h2><span style="color:#000">Discover & Share</span><br><span style="display:block;margin-top:8px;color:var(--accent);">AI Prompts</span></h2>
+      <div class="subline">Discover, submit, and manage creative AI prompts. Join a community of prompt engineers and creators pushing the boundaries of what's possible.</div>
 
-        <div class="actions">
-          <button class="btn-primary btn" onclick="openModalPage('my')" aria-label="Submit your AI prompt">
-            Submit Your Prompt
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <button class="btn btn-ghost" onclick="openModalPage('gallery')" aria-label="Explore AI prompt gallery">Explore Gallery</button>
+      <div class="actions">
+        <button class="btn-primary btn" onclick="openModalPage('my')">
+          Submit Your Prompt
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="btn btn-ghost" onclick="openModalPage('gallery')">Explore Gallery</button>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <h3 id="statPrompts">0</h3>
+          <p>Prompts Shared</p>
         </div>
-
-        <div class="stats" aria-label="Platform statistics">
-          <div class="stat">
-            <h3 id="statPrompts">0</h3>
-            <p>Prompts Shared</p>
-          </div>
-          <div class="stat">
-            <h3 id="statUsers">0</h3>
-            <p>Active Users</p>
-          </div>
-          <div class="stat">
-            <h3 id="statCats">0</h3>
-            <p>Categories</p>
-          </div>
+        <div class="stat">
+          <h3 id="statUsers">0</h3>
+          <p>Active Users</p>
+        </div>
+        <div class="stat">
+          <h3 id="statCats">0</h3>
+          <p>Categories</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Trending Section -->
-    <section class="trending-section" aria-labelledby="trending-heading">
-      <h2 id="trending-heading">Trending AI Prompts</h2>
-      <div id="trendingSub" class="subtag">Explore verified AI prompts with stunning visuals — copy any prompt instantly for ChatGPT, Midjourney, DALL-E, Gemini, Stable Diffusion, and Claude AI</div>
-      <div id="trendingGrid" class="grid"></div>
-    </section>
-  </main>
+  <!-- Trending Section -->
+  <section class="trending-section">
+    <h3 id="trendingTitle">Trending Prompts</h3>
+    <div id="trendingSub" class="subtag">Explore verified AI prompts with stunning visuals — copy any prompt instantly</div>
+    <div id="trendingGrid" class="grid"></div>
+  </section>
 
   <!-- Footer -->
-  <footer role="contentinfo">
+  <footer>
     <div class="footer-content">
-      <div>© 2025 PromptBud — by <a href="https://coderonins.vercel.app" target="_blank" rel="noopener noreferrer">Code Ronins</a></div>
-      <div class="made-with-love">Made with ♥ for the AI community</div>
-      <div style="margin-top: 10px; font-size: 12px;">
-        <a href="/privacy" style="margin: 0 10px;">Privacy Policy</a> | 
-        <a href="/terms" style="margin: 0 10px;">Terms of Service</a> | 
-        <a href="/contact" style="margin: 0 10px;">Contact</a>
-      </div>
+      <div>© 2025 PromptZen — by <a href="https://coderonins.vercel.app" target="_blank">Code Ronins</a></div>
+      <div class="made-with-love">Made with ♥</div>
     </div>
   </footer>
 
   <!-- Modal Pages -->
   <div id="modalGallery" class="modal-page">
     <div class="modal-page-header">
-      <h2 style="font-family:'Space Grotesk',sans-serif;margin:0;text-align:center;width:100%">AI Prompt Gallery</h2>
-      <button class="close-modal" onclick="closeModalPage('gallery')" aria-label="Close gallery">×</button>
+      <h2 style="font-family:'Space Grotesk',sans-serif;margin:0;text-align:center;width:100%">Gallery</h2>
+      <button class="close-modal" onclick="closeModalPage('gallery')">×</button>
     </div>
     <div class="modal-page-content">
       <div class="muted" style="margin-bottom:12px;text-align:center">All community prompts with sample images</div>
@@ -1526,7 +1375,7 @@
       <!-- Search Bar -->
       <div class="search-container">
         <div class="search-bar">
-          <input type="text" id="searchInput" class="search-input" placeholder="Search prompts by title, tagline, or content..." aria-label="Search AI prompts" />
+          <input type="text" id="searchInput" class="search-input" placeholder="Search prompts by title, tagline, or content..." />
         </div>
       </div>
       
@@ -1540,27 +1389,27 @@
 
   <div id="modalMy" class="modal-page">
     <div class="modal-page-header">
-      <h2 style="font-family:'Space Grotesk',sans-serif;margin:0">My AI Prompts</h2>
-      <button class="close-modal" onclick="closeModalPage('my')" aria-label="Close my prompts">×</button>
+      <h2 style="font-family:'Space Grotesk',sans-serif;margin:0">My Prompts</h2>
+      <button class="close-modal" onclick="closeModalPage('my')">×</button>
     </div>
     <div class="modal-page-content">
       <div style="display:flex;gap:18px;flex-wrap:wrap">
         <div style="flex:1;min-width:320px">
           <div class="panel">
-            <h3 style="font-family:'Space Grotesk',sans-serif;margin:0 0 6px">Submit AI Prompt</h3>
+            <h4 style="font-family:'Space Grotesk',sans-serif;margin:0 0 6px">Submit Prompt</h4>
             <div class="muted">Enter prompt details and upload an image or provide a URL</div>
 
-            <label for="fusername">Username *</label>
-            <input id="fusername" type="text" placeholder="Your name" aria-required="true" />
+            <label>Username *</label>
+            <input id="fusername" type="text" placeholder="Your name" />
 
-            <label for="ftitle">Prompt Title *</label>
-            <input id="ftitle" type="text" placeholder="Give your prompt a catchy title" aria-required="true" />
+            <label>Prompt Title *</label>
+            <input id="ftitle" type="text" placeholder="Give your prompt a catchy title" />
 
-            <label for="ftagline">Tagline *</label>
-            <input id="ftagline" type="text" placeholder="Short description of your prompt" aria-required="true" />
+            <label>Tagline *</label>
+            <input id="ftagline" type="text" placeholder="Short description of your prompt" />
 
-            <label for="fmodel">AI Model *</label>
-            <select id="fmodel" aria-required="true">
+            <label>AI Model *</label>
+            <select id="fmodel">
               <option value="">Select AI Model</option>
               <option value="ChatGPT">ChatGPT</option>
               <option value="Gemini">Gemini</option>
@@ -1572,11 +1421,11 @@
               <option value="Other">Other</option>
             </select>
 
-            <label for="ftext">Prompt Text *</label>
-            <textarea id="ftext" placeholder="Describe the prompt (style, mood, lens, color grading, etc.)" aria-required="true"></textarea>
+            <label>Prompt Text *</label>
+            <textarea id="ftext" placeholder="Describe the prompt (style, mood, lens, color grading, etc.)"></textarea>
 
             <label>Upload Image</label>
-            <div class="file-upload-area" id="fileUploadArea" role="button" tabindex="0" aria-label="Upload image for prompt">
+            <div class="file-upload-area" id="fileUploadArea">
               <div class="file-upload-icon">📁</div>
               <div class="file-upload-text">Click to upload or drag and drop</div>
               <div class="file-upload-hint">PNG, JPG, GIF up to 5MB</div>
@@ -1589,25 +1438,25 @@
 
             <div style="margin: 12px 0; text-align: center; color: var(--muted); font-size: 14px;">OR</div>
 
-            <label for="fimage">Image URL (alternative)</label>
+            <label>Image URL (alternative)</label>
             <input id="fimage" type="text" placeholder="https://example.com/image.jpg" />
             <div id="fpreview" style="margin-top:10px"></div>
 
             <div style="display:flex;gap:10px;margin-top:12px">
-              <button id="submitBtn" class="btn-primary btn" aria-label="Submit your AI prompt">
+              <button id="submitBtn" class="btn-primary btn">
                 Submit
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button id="clearBtn" class="btn btn-ghost" aria-label="Clear form">Clear</button>
+              <button id="clearBtn" class="btn btn-ghost">Clear</button>
             </div>
           </div>
         </div>
 
         <div style="width:380px;min-width:260px">
           <div class="panel">
-            <h3 style="margin:0;font-family:'Space Grotesk',sans-serif">My Submitted Prompts</h3>
+            <h4 style="margin:0;font-family:'Space Grotesk',sans-serif">My Submitted Prompts</h4>
             <div class="muted" style="margin-top:8px">Prompts you submitted will appear here after submission.</div>
             <div id="myPromptsList" style="margin-top:12px"></div>
           </div>
@@ -1619,15 +1468,15 @@
   <!-- About Page Modal -->
   <div id="modalAbout" class="modal-page">
     <div class="modal-page-header">
-      <h2 style="font-family:'Space Grotesk',sans-serif;margin:0">About PromptBud</h2>
-      <button class="close-modal" onclick="closeModalPage('about')" aria-label="Close about page">×</button>
+      <h2 style="font-family:'Space Grotesk',sans-serif;margin:0">About PromptZen</h2>
+      <button class="close-modal" onclick="closeModalPage('about')">×</button>
     </div>
     <div class="modal-page-content">
       <div class="about-content">
-        <h1>Welcome to PromptBud</h1>
-        <div class="version-badge">Current Version: alpha_01.00</div>
+        <h2>Welcome to PromptZen</h2>
+        <div class="version-badge">Current Version: indev_008.00</div>
         <p>
-          PromptBud is a revolutionary platform designed for AI enthusiasts, prompt engineers, and creative minds 
+          PromptZen is a revolutionary platform designed for AI enthusiasts, prompt engineers, and creative minds 
           to discover, share, and collaborate on the most effective AI prompts. In the rapidly evolving world of 
           artificial intelligence, the quality of prompts determines the quality of outputs. PromptZen serves as 
           a centralized hub where the community can contribute their most successful prompts across various AI 
@@ -1662,7 +1511,7 @@
   <div id="modalAdmin" class="modal-page">
     <div class="modal-page-header">
       <h2 style="font-family:'Space Grotesk',sans-serif;margin:0">Admin Dashboard</h2>
-      <button class="close-modal" onclick="closeModalPage('admin')" aria-label="Close admin dashboard">×</button>
+      <button class="close-modal" onclick="closeModalPage('admin')">×</button>
     </div>
     <div class="modal-page-content">
       <!-- Admin Stats -->
@@ -1691,24 +1540,24 @@
 
       <!-- Pending Prompts Section -->
       <div class="panel">
-        <h3 style="font-family:'Space Grotesk',sans-serif;margin:0 0 16px">Pending Prompts for Review</h3>
+        <h4 style="font-family:'Space Grotesk',sans-serif;margin:0 0 16px">Pending Prompts for Review</h4>
         
         <!-- Bulk Actions -->
         <div class="bulk-actions" style="display:none" id="bulkActions">
           <div class="selected-count" id="selectedCount">0 selected</div>
-          <button class="btn btn-success" onclick="bulkApprovePrompts()" aria-label="Approve selected prompts">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <button class="btn btn-success" onclick="bulkApprovePrompts()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
             Approve Selected
           </button>
-          <button class="btn btn-danger" onclick="bulkRejectPrompts()" aria-label="Reject selected prompts">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <button class="btn btn-danger" onclick="bulkRejectPrompts()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
             Reject Selected
           </button>
-          <button class="btn btn-ghost" onclick="clearSelection()" aria-label="Clear selection">Clear Selection</button>
+          <button class="btn btn-ghost" onclick="clearSelection()">Clear Selection</button>
         </div>
 
         <div id="pendingPromptsList">
@@ -1722,20 +1571,20 @@
   <div id="modal" class="modal-backdrop">
     <div class="modal">
       <div style="display: flex; gap: 10px; margin-bottom: 16px;">
-        <button id="loginTab" class="btn btn-primary" style="flex: 1;" onclick="switchAuthTab('login')" aria-label="Switch to login tab">Login</button>
-        <button id="registerTab" class="btn btn-ghost" style="flex: 1;" onclick="switchAuthTab('register')" aria-label="Switch to register tab">Register</button>
+        <button id="loginTab" class="btn btn-primary" style="flex: 1;" onclick="switchAuthTab('login')">Login</button>
+        <button id="registerTab" class="btn btn-ghost" style="flex: 1;" onclick="switchAuthTab('register')">Register</button>
       </div>
       
       <div id="loginForm">
         <h3 style="margin:0">Login</h3>
         <div style="margin-top:8px">
-          <label for="loginUser" class="form-label">Username</label>
-          <input id="loginUser" type="text" class="auth-input" placeholder="Enter your username" aria-required="true"/>
-          <label for="loginPass" class="form-label" style="margin-top:16px">Password</label>
-          <input id="loginPass" type="password" class="auth-input" placeholder="Enter your password" aria-required="true"/>
+          <label class="form-label">Username</label>
+          <input id="loginUser" type="text" class="auth-input" placeholder="Enter your username"/>
+          <label class="form-label" style="margin-top:16px">Password</label>
+          <input id="loginPass" type="password" class="auth-input" placeholder="Enter your password"/>
           <div style="display:flex;gap:8px;margin-top:20px;justify-content:flex-end">
-            <button onclick="closeLogin()" class="btn" aria-label="Cancel login">Cancel</button>
-            <button class="btn-primary btn" onclick="doLogin()" aria-label="Login to PromptZen">Login</button>
+            <button onclick="closeLogin()" class="btn">Cancel</button>
+            <button class="btn-primary btn" onclick="doLogin()">Login</button>
           </div>
         </div>
       </div>
@@ -1743,16 +1592,16 @@
       <div id="registerForm" style="display: none;">
         <h3 style="margin:0">Register</h3>
         <div style="margin-top:8px">
-          <label for="registerUser" class="form-label">Username</label>
-          <input id="registerUser" type="text" class="auth-input" placeholder="Choose a username (3-20 characters)" aria-required="true"/>
-          <label for="registerPass" class="form-label" style="margin-top:16px">Password</label>
-          <input id="registerPass" type="password" class="auth-input" placeholder="At least 6 characters" aria-required="true"/>
+          <label class="form-label">Username</label>
+          <input id="registerUser" type="text" class="auth-input" placeholder="Choose a username (3-20 characters)"/>
+          <label class="form-label" style="margin-top:16px">Password</label>
+          <input id="registerPass" type="password" class="auth-input" placeholder="At least 6 characters"/>
           <div style="font-size: 12px; color: var(--muted); margin-top: 8px;">
             Username must be 3-20 alphanumeric characters. Password must be at least 6 characters.
           </div>
           <div style="display:flex;gap:8px;margin-top:20px;justify-content:flex-end">
-            <button onclick="closeLogin()" class="btn" aria-label="Cancel registration">Cancel</button>
-            <button class="btn-primary btn" onclick="doRegister()" aria-label="Register for PromptZen">Register</button>
+            <button onclick="closeLogin()" class="btn">Cancel</button>
+            <button class="btn-primary btn" onclick="doRegister()">Register</button>
           </div>
         </div>
       </div>
@@ -1766,7 +1615,7 @@
       <p>Hmm... Looks like you're too interested in the logo.</p>
       <p>Well, it's never just a Logo. Each corner represents one of the 5 members of Code Ronins who worked on this project.</p>
       <p>Now you can place stars anywhere on the page! Click anywhere to place a star, and drag it to move it around.</p>
-      <button class="easter-egg-close" onclick="closeLogoEasterEgg()" aria-label="Close Easter egg">Got it!</button>
+      <button class="easter-egg-close" onclick="closeLogoEasterEgg()">Got it!</button>
     </div>
   </div>
 
@@ -1779,8 +1628,8 @@
         <!-- Cells will be generated by JavaScript -->
       </div>
       <div class="tictactoe-controls">
-        <button class="new-game-btn" onclick="startNewTicTacToeGame()" aria-label="Start new Tic Tac Toe game">New Game</button>
-        <button class="close-btn" onclick="closeTicTacToeEasterEgg()" aria-label="Close Tic Tac Toe">Close</button>
+        <button class="new-game-btn" onclick="startNewTicTacToeGame()">New Game</button>
+        <button class="close-btn" onclick="closeTicTacToeEasterEgg()">Close</button>
       </div>
     </div>
   </div>
@@ -1791,16 +1640,16 @@
   <!-- Star Placer Easter Egg -->
   <div id="starPlacer" class="star-placer">
     <div class="star-placer-controls" id="starPlacerControls">
-      <button class="clear-btn" onclick="clearStars()" aria-label="Clear all stars">Clear Stars</button>
+      <button class="clear-btn" onclick="clearStars()">Clear Stars</button>
     </div>
   </div>
 
   <!-- Book Icon Easter Egg -->
-  <div class="book-icon" id="bookIcon" onclick="openTicTacToeEasterEgg()" role="button" aria-label="Open Tic Tac Toe game">📚</div>
+  <div class="book-icon" id="bookIcon" onclick="openTicTacToeEasterEgg()">📚</div>
 
   <!-- toast for copy -->
   <div id="toast" class="toast" aria-live="polite" role="status" style="display:flex;align-items:center;">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="flex:0 0 18px" aria-hidden="true">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="flex:0 0 18px">
       <path d="M20 6L9 17l-5-5" stroke="#4ade80" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
     <div id="toastText">Copied to clipboard</div>
@@ -1888,13 +1737,9 @@ function getAuthHeaders() {
 /* ------------------------------------------------------------------------- */
 function toggleMobileNav() {
   const mobileNav = document.getElementById('mobileNav');
-  const isActive = mobileNav.classList.toggle('active');
-  document.body.style.overflow = isActive ? 'hidden' : 'auto';
-  const toggleBtn = document.querySelector('.mobile-nav-toggle');
-  toggleBtn.setAttribute('aria-expanded', isActive);
-  toggleBtn.setAttribute('aria-label', isActive ? 'Close mobile navigation' : 'Open mobile navigation');
+  mobileNav.classList.toggle('active');
+  document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : 'auto';
 }
-
 function navToMobile(page) {
   navTo(page);
   toggleMobileNav();
@@ -1931,16 +1776,6 @@ function navTo(page){
   if(page === 'admin') loadAdminDashboard();
 
   window.scrollTo({top: 0, behavior: 'smooth'});
-  
-  // Update page title for better SEO
-  const pageTitles = {
-    'home': 'PromptBud — Discover & Share Viral AI Prompts',
-    'gallery': 'AI Prompt Gallery | PromptBud',
-    'my': 'My AI Prompts | PromptBud',
-    'about': 'About PromptBud | AI Prompt Marketplace',
-    'admin': 'Admin Dashboard | PromptBud'
-  };
-  document.title = pageTitles[page] || 'PromptBud — AI Prompt Platform';
 }
 
 function openModalPage(page) {
@@ -2165,14 +2000,6 @@ function initializeFileUpload() {
     fileInput.click();
   });
 
-  // Key handler for accessibility
-  fileUploadArea.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      fileInput.click();
-    }
-  });
-
   // Drag and drop handlers
   fileUploadArea.addEventListener('dragover', (e) => {
     e.preventDefault();
@@ -2227,7 +2054,7 @@ function initializeFileUpload() {
     // Show preview
     const reader = new FileReader();
     reader.onload = (e) => {
-      uploadPreview.innerHTML = `<img src="${e.target.result}" alt="Preview of uploaded image" style="max-width: 100%; border-radius: 8px;">`;
+      uploadPreview.innerHTML = `<img src="${e.target.result}" alt="Preview" style="max-width: 100%; border-radius: 8px;">`;
       uploadedImageUrl = e.target.result;
     };
     reader.readAsDataURL(file);
@@ -2493,9 +2320,6 @@ function initializeTicTacToe() {
     const cell = document.createElement('div');
     cell.className = 'tictactoe-cell';
     cell.dataset.index = i;
-    cell.setAttribute('role', 'button');
-    cell.setAttribute('tabindex', '0');
-    cell.setAttribute('aria-label', `Tic Tac Toe cell ${i}`);
     cell.addEventListener('click', () => handleTicTacToeClick(i));
     grid.appendChild(cell);
   }
@@ -2676,7 +2500,7 @@ function formatDate(iso){
 function escapeHtml(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
 function makeCardElement(prompt){
-  const container = document.createElement('article');
+  const container = document.createElement('div');
   container.className = 'card fade-in';
   container.dataset.id = prompt.id;
 
@@ -2710,8 +2534,7 @@ function makeCardElement(prompt){
   if(prompt.image_url){
     const img = document.createElement('img');
     img.src = prompt.image_url;
-    img.alt = `${prompt.title || 'AI prompt'} - ${prompt.tagline || 'Generated image'}`;
-    img.loading = 'lazy';
+    img.alt = prompt.title || 'prompt image';
     img.onerror = function() {
       this.style.display = 'none';
       imgWrap.textContent = 'Image not available';
@@ -2731,7 +2554,7 @@ function makeCardElement(prompt){
   container.appendChild(imgWrap);
 
   // title
-  const h = document.createElement('h3');
+  const h = document.createElement('h4');
   h.innerHTML = `<span>${escapeHtml(prompt.title || prompt.text.slice(0,40))}</span>`;
   container.appendChild(h);
 
@@ -2751,7 +2574,7 @@ function makeCardElement(prompt){
   const modelInfo = document.createElement('div');
   modelInfo.className = 'model-info';
   modelInfo.innerHTML = `
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -2787,10 +2610,9 @@ function makeCardElement(prompt){
 
     const copyBtn = document.createElement('button');
     copyBtn.className = 'copy-btn';
-    copyBtn.title = 'Copy prompt text to clipboard';
-    copyBtn.setAttribute('aria-label', `Copy prompt: ${prompt.title}`);
+    copyBtn.title = 'Copy prompt text';
     copyBtn.innerHTML = `
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M9 12H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
         <rect x="9" y="9" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
@@ -2804,7 +2626,7 @@ function makeCardElement(prompt){
         showToast('Prompt copied to clipboard');
         const originalHTML = copyBtn.innerHTML;
         copyBtn.innerHTML = `
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
           Copied!
@@ -2874,8 +2696,8 @@ async function loadPendingPrompts() {
           </div>
         </div>
         <div class="admin-actions">
-          <button class="btn btn-success" onclick="approvePrompt('${prompt.id}')" aria-label="Approve prompt: ${escapeHtml(prompt.title)}">✓ Approve</button>
-          <button class="btn btn-danger" onclick="rejectPrompt('${prompt.id}')" aria-label="Reject prompt: ${escapeHtml(prompt.title)}">✗ Reject</button>
+          <button class="btn btn-success" onclick="approvePrompt('${prompt.id}')">✓ Approve</button>
+          <button class="btn btn-danger" onclick="rejectPrompt('${prompt.id}')">✗ Reject</button>
         </div>
       `;
       container.appendChild(item);
@@ -3141,7 +2963,6 @@ document.getElementById('fimage').addEventListener('input', (e)=>{
   img.style.maxWidth='100%'; 
   img.style.borderRadius='8px';
   img.style.maxHeight = '200px';
-  img.alt = 'Preview of submitted image';
   img.onerror = function() {
     preview.innerHTML = '<div style="color: var(--danger); font-size: 12px;">Invalid image URL</div>';
   };
@@ -3289,24 +3110,6 @@ function updateSubmitForm() {
   updateSubmitForm();
   await loadTrending();
   navTo('home');
-  
-  // Initialize structured data for SEO
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "PromptBud - AI Prompt Platform",
-    "description": "Discover, share, and manage AI prompts for ChatGPT, Midjourney, DALL-E, and more.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Code Ronins",
-      "url": "https://coderonins.vercel.app"
-    }
-  };
-  
-  const script = document.createElement('script');
-  script.type = 'application/ld+json';
-  script.textContent = JSON.stringify(structuredData);
-  document.head.appendChild(script);
 })();
   </script>
 </body>
