@@ -1,21 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
   <url>
     <loc>https://promptbud.vercel.app/</loc>
     <lastmod>2025-12-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+  
+  <!-- Gallery -->
   <url>
-    <loc>https://promptbud.vercel.app/gallery</loc>
+    <loc>https://promptbud.vercel.app/#gallery</loc>
     <lastmod>2025-12-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
+  
+  <!-- About -->
   <url>
-    <loc>https://promptbud.vercel.app/about</loc>
+    <loc>https://promptbud.vercel.app/#about</loc>
     <lastmod>2025-12-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  
+  <!-- Categories (static pages) -->
+  <url>
+    <loc>https://promptbud.vercel.app/chatgpt-prompts</loc>
+    <lastmod>2025-12-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://promptbud.vercel.app/midjourney-prompts</loc>
+    <lastmod>2025-12-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://promptbud.vercel.app/dalle-prompts</loc>
+    <lastmod>2025-12-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Dynamic prompt URLs (you'll need to generate these) -->
+  <!-- Example: -->
+  <url>
+    <loc>https://promptbud.vercel.app/prompt/amazing-chatgpt-prompt-123</loc>
+    <lastmod>2025-12-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://promptbud.vercel.app/prompt-image-123.jpg</image:loc>
+      <image:title>Amazing ChatGPT Prompt for Creative Image Generation</image:title>
+    </image:image>
+  </url>
+  
 </urlset>
