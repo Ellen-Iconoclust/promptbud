@@ -60,6 +60,174 @@
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
       padding-bottom:80px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Blur Blobs Background */
+        /* Blur Blobs Background - Using only brand colors */
+    .blob {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.15;
+      z-index: -1;
+      animation: float 25s infinite ease-in-out;
+      pointer-events: none;
+    }
+
+    .blob-1 {
+      width: 400px;
+      height: 400px;
+      background: linear-gradient(135deg, var(--accent), var(--hover-purple));
+      top: 10%;
+      left: 5%;
+      animation-delay: 0s;
+    }
+    .blob-2 {
+      width: 350px;
+      height: 350px;
+      background: linear-gradient(135deg, var(--hover-purple), var(--accent-2));
+      bottom: 15%;
+      right: 8%;
+      animation-delay: -5s;
+    }
+    .blob-3 {
+      width: 300px;
+      height: 300px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      top: 40%;
+      right: 15%;
+      animation-delay: -10s;
+    }
+    .blob-4 {
+      width: 450px;
+      height: 450px;
+      background: linear-gradient(135deg, var(--accent-2), var(--hover-purple));
+      bottom: 25%;
+      left: 10%;
+      animation-delay: -15s;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0) scale(1) rotate(0deg);
+      }
+      25% {
+        transform: translateY(-40px) scale(1.05) rotate(5deg);
+      }
+      50% {
+        transform: translateY(20px) scale(0.95) rotate(-5deg);
+      }
+      75% {
+        transform: translateY(-20px) scale(1.02) rotate(3deg);
+      }
+    }
+
+    /* Image Viewer Modal */
+    .image-viewer-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.92);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .image-viewer-modal.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .image-viewer-content {
+      max-width: 90vw;
+      max-height: 90vh;
+      position: relative;
+      transform: scale(0.95);
+      transition: transform 0.3s ease;
+    }
+
+    .image-viewer-modal.active .image-viewer-content {
+      transform: scale(1);
+    }
+
+    .image-viewer-img {
+      max-width: 100%;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+      background: #1a1a1a;
+      padding: 4px;
+      cursor: zoom-out;
+    }
+
+    .image-viewer-close {
+      position: absolute;
+      top: -45px;
+      right: 0;
+      background: rgba(255, 255, 255, 0.15);
+      border: none;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      z-index: 10001;
+    }
+
+    .image-viewer-close:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: rotate(90deg);
+    }
+
+    .image-viewer-info {
+      position: absolute;
+      bottom: -45px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 14px;
+      padding: 12px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 8px;
+      backdrop-filter: blur(10px);
+    }
+
+    .image-viewer-title {
+      font-weight: 600;
+      color: white;
+      margin-bottom: 4px;
+    }
+
+    .image-viewer-model {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* Add this to existing .card img to make it clear it's clickable */
+    .card .img img {
+      cursor: pointer;
+      transition: transform 0.6s cubic-bezier(.2,.9,.2,1);
+    }
+
+    .card .img img:hover {
+      transform: scale(1.08);
     }
 
     /* top glass nav container (contained, not browser) */
@@ -796,7 +964,7 @@
       gap: 10px;
       align-items: center;
       box-shadow: 0 10px 30px rgba(10,10,15,0.25);
-      z-index: 9999;
+      z-index: 10002;
       opacity: 0;
       transform: translateY(8px);
       transition: opacity .18s, transform .24s;
@@ -1248,6 +1416,14 @@
         left: 10px;
         font-size: 32px;
       }
+      /* Mobile adjustments for blobs */
+      .blob {
+        filter: blur(60px);
+      }
+      .blob-1, .blob-2, .blob-3, .blob-4 {
+        width: 250px;
+        height: 250px;
+      }
     }
 
     @media (max-width: 480px) {
@@ -1315,10 +1491,36 @@
         height: 60px;
         font-size: 24px;
       }
+      /* Smaller blobs for mobile */
+      .blob {
+        filter: blur(40px);
+        opacity: 0.1;
+      }
+      .blob-1, .blob-2, .blob-3, .blob-4 {
+        width: 180px;
+        height: 180px;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- Blur Blobs Background -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="blob blob-4"></div>
+
+  <!-- Image Viewer Modal -->
+  <div id="imageViewerModal" class="image-viewer-modal" onclick="closeImageViewer(event)">
+    <div class="image-viewer-content" onclick="event.stopPropagation()">
+      <button class="image-viewer-close" onclick="closeImageViewer()">×</button>
+      <img id="viewerImage" class="image-viewer-img" src="" alt="Full size view">
+      <div class="image-viewer-info">
+        <div id="viewerTitle" class="image-viewer-title"></div>
+        <div id="viewerModel" class="image-viewer-model"></div>
+      </div>
+    </div>
+  </div>
 
   <div class="topbar-wrap">
     <header>
@@ -1866,6 +2068,125 @@ const STORAGE_KEYS = {
   ACCEPTED_POLICIES: 'promptbud_accepted_policies'
 };
 
+/* ---------- Image Viewer Functions ---------- */
+function openImageViewer(imageSrc, title, model) {
+  const modal = document.getElementById('imageViewerModal');
+  const img = document.getElementById('viewerImage');
+  const titleEl = document.getElementById('viewerTitle');
+  const modelEl = document.getElementById('viewerModel');
+  
+  img.src = imageSrc;
+  img.alt = title || 'Prompt image';
+  titleEl.textContent = title || 'Prompt Image';
+  modelEl.textContent = `AI Model: ${model || 'Not specified'}`;
+  
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+  
+  // Add escape key listener
+  document.addEventListener('keydown', handleEscapeKey);
+}
+
+function closeImageViewer(event) {
+  if (event && event.target.classList.contains('image-viewer-modal')) {
+    // Allow closing by clicking overlay
+  } else if (event && !event.target.classList.contains('image-viewer-modal')) {
+    return;
+  }
+  
+  const modal = document.getElementById('imageViewerModal');
+  modal.classList.remove('active');
+  document.body.style.overflow = 'auto';
+  
+  document.removeEventListener('keydown', handleEscapeKey);
+}
+
+function handleEscapeKey(event) {
+  if (event.key === 'Escape') {
+    closeImageViewer();
+  }
+}
+
+/* ---------- Create Image Container with Click Functionality ---------- */
+function createImageContainer(prompt) {
+  const imgWrap = document.createElement('div');
+  imgWrap.className = 'img';
+  
+  if(prompt.image_url){
+    const img = document.createElement('img');
+    img.src = prompt.image_url;
+    img.alt = prompt.title || 'prompt image';
+    img.loading = 'lazy';
+    
+    // Add click event for fullscreen view
+    img.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openImageViewer(prompt.image_url, prompt.title, prompt.model);
+    });
+    
+    img.onerror = function() {
+      this.style.display = 'none';
+      const errorDiv = document.createElement('div');
+      errorDiv.textContent = 'Image not available';
+      errorDiv.style.width = '100%';
+      errorDiv.style.height = '100%';
+      errorDiv.style.display = 'flex';
+      errorDiv.style.alignItems = 'center';
+      errorDiv.style.justifyContent = 'center';
+      errorDiv.style.color = 'var(--muted)';
+      errorDiv.style.cursor = 'default';
+      imgWrap.appendChild(errorDiv);
+    };
+    
+    imgWrap.appendChild(img);
+    
+    // Add hover overlay with zoom icon
+    const hoverOverlay = document.createElement('div');
+    hoverOverlay.style.position = 'absolute';
+    hoverOverlay.style.top = '0';
+    hoverOverlay.style.left = '0';
+    hoverOverlay.style.width = '100%';
+    hoverOverlay.style.height = '100%';
+    hoverOverlay.style.background = 'rgba(0,0,0,0)';
+    hoverOverlay.style.display = 'flex';
+    hoverOverlay.style.alignItems = 'center';
+    hoverOverlay.style.justifyContent = 'center';
+    hoverOverlay.style.borderRadius = '10px';
+    hoverOverlay.style.transition = 'background 0.3s ease';
+    hoverOverlay.style.pointerEvents = 'none';
+    
+    const zoomIcon = document.createElement('div');
+    zoomIcon.innerHTML = `
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" style="opacity: 0; transition: opacity 0.3s ease;">
+        <circle cx="12" cy="12" r="10" stroke="white" stroke-width="1.5"/>
+        <path d="M12 8v8M8 12h8" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    `;
+    hoverOverlay.appendChild(zoomIcon);
+    
+    imgWrap.addEventListener('mouseenter', () => {
+      hoverOverlay.style.background = 'rgba(0,0,0,0.2)';
+      zoomIcon.querySelector('svg').style.opacity = '1';
+    });
+    
+    imgWrap.addEventListener('mouseleave', () => {
+      hoverOverlay.style.background = 'rgba(0,0,0,0)';
+      zoomIcon.querySelector('svg').style.opacity = '0';
+    });
+    
+    imgWrap.appendChild(hoverOverlay);
+  } else {
+    imgWrap.textContent = 'No image';
+    imgWrap.style.display = 'flex';
+    imgWrap.style.alignItems = 'center';
+    imgWrap.style.justifyContent = 'center';
+    imgWrap.style.color = 'var(--muted)';
+    imgWrap.style.cursor = 'default';
+  }
+  
+  return imgWrap;
+}
+
 /* ---------- Local Storage Management ---------- */
 function getLocalStorage(key, defaultValue = null) {
   try {
@@ -1887,7 +2208,6 @@ function setLocalStorage(key, value) {
 
 // Clear any existing data and initialize fresh
 function initializeLocalStorage() {
-  // Clear ALL existing data to start fresh
   setLocalStorage(STORAGE_KEYS.PROMPTS, []);
   setLocalStorage(STORAGE_KEYS.USERS, {});
   console.log('Local storage initialized with empty data');
@@ -2749,29 +3069,8 @@ function makeCardElement(prompt){
     container.appendChild(badge);
   }
 
-  // image container
-  const imgWrap = document.createElement('div');
-  imgWrap.className = 'img';
-  if(prompt.image_url){
-    const img = document.createElement('img');
-    img.src = prompt.image_url;
-    img.alt = prompt.title || 'prompt image';
-    img.onerror = function() {
-      this.style.display = 'none';
-      imgWrap.textContent = 'Image not available';
-      imgWrap.style.display = 'flex';
-      imgWrap.style.alignItems = 'center';
-      imgWrap.style.justifyContent = 'center';
-      imgWrap.style.color = 'var(--muted)';
-    };
-    imgWrap.appendChild(img);
-  } else {
-    imgWrap.textContent = 'No image';
-    imgWrap.style.display = 'flex';
-    imgWrap.style.alignItems = 'center';
-    imgWrap.style.justifyContent = 'center';
-    imgWrap.style.color = 'var(--muted)';
-  }
+  // image container - USING THE NEW FUNCTION
+  const imgWrap = createImageContainer(prompt);
   container.appendChild(imgWrap);
 
   // title
