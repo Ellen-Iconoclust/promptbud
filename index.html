@@ -3631,6 +3631,34 @@ function updateSubmitForm() {
   await loadTrending();
   navTo('home');
 })();
+    /* ---------- Disable Right Click ---------- */
+// Prevent context menu (right-click) on the entire document
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+  showToast('Right-click is disabled on this site');
+  return false;
+});
+
+// Optional: Also prevent common keyboard shortcuts for viewing source
+document.addEventListener('keydown', function(e) {
+  // Disable Ctrl+U (View Source) and Ctrl+Shift+I (DevTools) on Windows/Linux
+  // Disable Cmd+Option+I on Mac
+  if (
+    (e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 'i' || e.key === 'I')) ||
+    (e.metaKey && e.altKey && (e.key === 'i' || e.key === 'I'))
+  ) {
+    e.preventDefault();
+    showToast('Source code viewing is restricted');
+    return false;
+  }
+  
+  // Disable F12 key (DevTools)
+  if (e.key === 'F12') {
+    e.preventDefault();
+    showToast('Developer tools access is restricted');
+    return false;
+  }
+});//3634 is the key
   </script>
 </body>
 </html>
