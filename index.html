@@ -5,11 +5,37 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="google-site-verification" content="Nkr8m_fkjwojaMuOK8nLzoy2J3hEXDLKEIXCaGAtAVA" />
   
- <!-- Theme Color for Browser Address Bar - Subtle Version -->
-  <meta name="theme-color" content="#FFB3A0" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#9D4EDD" media="(prefers-color-scheme: dark)">
-  <meta name="msapplication-navbutton-color" content="#FFB3A0">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<script>
+  // Detect dark mode preference and set theme color
+  function updateThemeColor() {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+    
+    if (isDarkMode) {
+      // Dark mode colors
+      themeColorMeta.setAttribute('content', '#9D4EDD');
+      // Update other meta tags too
+      document.querySelector('meta[name="msapplication-navbutton-color"]')?.setAttribute('content', '#9D4EDD');
+      document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]')?.setAttribute('content', '#9D4EDD');
+    } else {
+      // Light mode colors
+      themeColorMeta.setAttribute('content', '#FFB3A0');
+      document.querySelector('meta[name="msapplication-navbutton-color"]')?.setAttribute('content', '#FFB3A0');
+      document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]')?.setAttribute('content', '#FFB3A0');
+    }
+  }
+
+  // Set initial theme color
+  document.addEventListener('DOMContentLoaded', updateThemeColor);
+  
+  // Listen for theme changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateThemeColor);
+</script>
+  <!-- Theme Color - will be set by JavaScript -->
+<meta name="theme-color" content="#FFB3A0">
+<meta name="msapplication-navbutton-color" content="#FFB3A0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#FFB3A0">
   
   <!-- SEO Meta Tags -->
   <title>PromptBud — Discover & Share Viral AI Prompts</title>
