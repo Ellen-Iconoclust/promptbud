@@ -3761,6 +3761,37 @@ document.addEventListener('DOMContentLoaded', () => {
   initializeBackToTop();
   // ... your other initialization code
 });
+    /* ---------- Dynamic Theme Color Update ---------- */
+function updateThemeColor() {
+  const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const themeColor = isDarkMode ? '#9D4EDD' : '#FFB3A0';
+  
+  // Update all theme-color meta tags
+  document.querySelectorAll('meta[name="theme-color"]').forEach(meta => {
+    if (!meta.hasAttribute('media') || meta.getAttribute('media') === '(prefers-color-scheme: dark)' && isDarkMode) {
+      meta.setAttribute('content', themeColor);
+    }
+  });
+  
+  // Update dynamic theme-color tag
+  const dynamicThemeColor = document.getElementById('dynamic-theme-color');
+  if (dynamicThemeColor) {
+    dynamicThemeColor.setAttribute('content', themeColor);
+  }
+  
+  console.log('Theme color updated to:', themeColor, 'for', isDarkMode ? 'dark' : 'light', 'mode');
+}
+
+// Initialize on load
+document.addEventListener('DOMContentLoaded', () => {
+  updateThemeColor();
+  
+  // Listen for color scheme changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateThemeColor);
+});
+
+// Also call updateThemeColor when any modal/page changes
+window.addEventListener('pageshow', updateThemeColor);
   </script>
   <!-- Back to Top Button -->
 <button id="backToTop" class="back-to-top-btn" aria-label="Scroll to top">
