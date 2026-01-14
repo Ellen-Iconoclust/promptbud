@@ -3,31 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  
-<!-- CRITICAL: Theme color meta tags in this exact order -->
-<!-- Dark mode first for better browser compatibility -->
-<meta name="theme-color" content="#9D4EDD" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#FFB3A0" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#FFB3A0" id="dynamic-theme-color">
-
-<!-- Support for Safari 15+ which uses different meta tags -->
-<meta name="theme-color" content="#9D4EDD" media="(prefers-color-scheme: dark)" id="theme-color-dark">
-<meta name="theme-color" content="#FFB3A0" media="(prefers-color-scheme: light)" id="theme-color-light">
-
-<!-- Additional Safari specific theme-color support -->
-<meta name="theme-color" content="#9D4EDD" id="safari-theme-color-dark">
-<meta name="theme-color" content="#FFB3A0" id="safari-theme-color-light">
-
-<!-- Windows/Edge specific -->
-<meta name="msapplication-TileColor" content="#9D4EDD">
-<meta name="msapplication-navbutton-color" content="#9D4EDD">
-
-<!-- iOS Safari specific -->
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="PromptBud">
-  
   <meta name="google-site-verification" content="Nkr8m_fkjwojaMuOK8nLzoy2J3hEXDLKEIXCaGAtAVA" />
+
+  <!-- Simple theme-color for Chrome -->
+<meta name="theme-color" content="#FFB3A0">
+
+<!-- For better PWA support, add these too -->
+<meta name="msapplication-TileColor" content="#FFB3A0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
   
   <!-- SEO Meta Tags -->
   <title>PromptBud — Discover & Share Viral AI Prompts</title>
@@ -3761,37 +3745,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initializeBackToTop();
   // ... your other initialization code
 });
-    /* ---------- Dynamic Theme Color Update ---------- */
-function updateThemeColor() {
-  const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const themeColor = isDarkMode ? '#9D4EDD' : '#FFB3A0';
-  
-  // Update all theme-color meta tags
-  document.querySelectorAll('meta[name="theme-color"]').forEach(meta => {
-    if (!meta.hasAttribute('media') || meta.getAttribute('media') === '(prefers-color-scheme: dark)' && isDarkMode) {
-      meta.setAttribute('content', themeColor);
-    }
-  });
-  
-  // Update dynamic theme-color tag
-  const dynamicThemeColor = document.getElementById('dynamic-theme-color');
-  if (dynamicThemeColor) {
-    dynamicThemeColor.setAttribute('content', themeColor);
-  }
-  
-  console.log('Theme color updated to:', themeColor, 'for', isDarkMode ? 'dark' : 'light', 'mode');
-}
-
-// Initialize on load
-document.addEventListener('DOMContentLoaded', () => {
-  updateThemeColor();
-  
-  // Listen for color scheme changes
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateThemeColor);
-});
-
-// Also call updateThemeColor when any modal/page changes
-window.addEventListener('pageshow', updateThemeColor);
   </script>
   <!-- Back to Top Button -->
 <button id="backToTop" class="back-to-top-btn" aria-label="Scroll to top">
