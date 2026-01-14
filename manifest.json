@@ -1,0 +1,16 @@
+{
+  "name": "PromptBud",
+  "short_name": "PromptBud",
+  "description": "Discover & Share Viral AI Prompts",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFB3A0",
+  "theme_color": "#FFB3A0",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48 32x32 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}
