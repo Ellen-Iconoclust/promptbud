@@ -5,24 +5,28 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   
 <!-- CRITICAL: Theme color meta tags in this exact order -->
-  <meta name="theme-color" content="#FFB3A0" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#9D4EDD" media="(prefers-color-scheme: dark)">
-  
-  <!-- Fallback for browsers that don't support media queries -->
-  <meta name="theme-color" content="#FFB3A0">
-  
-  <!-- Windows/Edge specific -->
-  <meta name="msapplication-TileColor" content="#9D4EDD">
-  <meta name="msapplication-navbutton-color" content="#9D4EDD">
-  
-  <!-- iOS Safari specific -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="PromptBud">
-  
-  <!-- Manifest for PWA -->
-  <link rel="manifest" href="/manifest.json">
+<!-- Dark mode first for better browser compatibility -->
+<meta name="theme-color" content="#9D4EDD" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FFB3A0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#FFB3A0" id="dynamic-theme-color">
 
+<!-- Support for Safari 15+ which uses different meta tags -->
+<meta name="theme-color" content="#9D4EDD" media="(prefers-color-scheme: dark)" id="theme-color-dark">
+<meta name="theme-color" content="#FFB3A0" media="(prefers-color-scheme: light)" id="theme-color-light">
+
+<!-- Additional Safari specific theme-color support -->
+<meta name="theme-color" content="#9D4EDD" id="safari-theme-color-dark">
+<meta name="theme-color" content="#FFB3A0" id="safari-theme-color-light">
+
+<!-- Windows/Edge specific -->
+<meta name="msapplication-TileColor" content="#9D4EDD">
+<meta name="msapplication-navbutton-color" content="#9D4EDD">
+
+<!-- iOS Safari specific -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="PromptBud">
+  
   <meta name="google-site-verification" content="Nkr8m_fkjwojaMuOK8nLzoy2J3hEXDLKEIXCaGAtAVA" />
   
   <!-- SEO Meta Tags -->
