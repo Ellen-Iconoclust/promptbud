@@ -1501,6 +1501,57 @@
         height: 180px;
       }
     }
+    /* Back to Top Button */
+.back-to-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(255, 123, 101, 0.3);
+  transition: all 0.3s ease;
+}
+
+.back-to-top-btn:hover {
+  background: var(--hover-purple);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(164, 107, 245, 0.4);
+}
+
+.back-to-top-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .back-to-top-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .back-to-top-btn {
+    bottom: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
   </style>
 </head>
 <body>
@@ -3659,6 +3710,37 @@ document.addEventListener('keydown', function(e) {
     return false;
   }
 });//3634 is the key
+    /* ---------- Back to Top Button ---------- */
+function initializeBackToTop() {
+  const backToTopBtn = document.getElementById('backToTop');
+  
+  // Show/hide button based on scroll position
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      backToTopBtn.style.display = 'flex';
+    } else {
+      backToTopBtn.style.display = 'none';
+    }
+  });
+  
+  // Scroll to top when clicked
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
+
+// Initialize the back to top button when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+  initializeBackToTop();
+  // ... your other initialization code
+});
   </script>
+  <!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top-btn" aria-label="Scroll to top">
+  ↑
+</button>
 </body>
 </html>
