@@ -1586,8 +1586,8 @@
   "@graph": [
     {
       "@type": "WebApplication",
-      "@id": "https://promptbud.vercel.app",
-      "name": "PromptBud",
+      "@id": "https://promptbud.vercel.app/#software",
+      "name": "PromptBud AI Platform",
       "url": "https://promptbud.vercel.app",
       "applicationCategory": "ProductivityApplication",
       "operatingSystem": "Web",
@@ -1611,23 +1611,36 @@
         "address": { "@type": "PostalAddress", "addressCountry": "IN" }
       },
       "member": [
-        { "@type": "Person", "name": "Ellen Iconoclust", "jobTitle": "Lead Developer", "url": "https://ellen-dev.vercel.app" },
-        { "@type": "Person", "name": "Karmughilan", "jobTitle": "AI Research Lead" },
-        { "@type": "Person", "name": "Shahana Balakrishnan", "jobTitle": "UI/UX Designer" },
-        { "@type": "Person", "name": "Nishanth", "jobTitle": "Backend Developer" },
-        { "@type": "Person", "name": "Soundarya", "jobTitle": "Assistant Backend Developer" }
+        { 
+          "@type": "Person", 
+          "@id": "https://promptbud.vercel.app/#ellen",
+          "name": "Ellen Iconoclust", 
+          "jobTitle": "Lead Developer", 
+          "url": "https://ellen-dev.vercel.app",
+          "sameAs": "https://github.com/ellen-iconoclust" 
+        },
+        { 
+          "@type": "Person", 
+          "@id": "https://promptbud.vercel.app/#karmughilan",
+          "name": "Karmughilan", 
+          "jobTitle": "AI Research Lead",
+          "sameAs": "https://linkedin.com/in/karmughilan"
+        },
+        { "@type": "Person", "@id": "https://promptbud.vercel.app/#shahana", "name": "Shahana Balakrishnan", "jobTitle": "UI/UX Designer" },
+        { "@type": "Person", "@id": "https://promptbud.vercel.app/#nishanth", "name": "Nishanth", "jobTitle": "Backend Developer" },
+        { "@type": "Person", "@id": "https://promptbud.vercel.app/#soundarya", "name": "Soundarya", "jobTitle": "Assistant Backend Developer" }
       ]
     },
     {
       "@type": "FAQPage",
-      "@id": "https://promptbud.vercel.app",
+      "@id": "https://promptbud.vercel.app/#faq",
       "mainEntity": [
         {
           "@type": "Question",
           "name": "Is PromptBud a browser extension?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. PromptBud is a standalone web platform (promptbud.vercel.app). It is not affiliated with any browser extensions of the same name."
+            "text": "No. PromptBud is a standalone web platform (promptbud.vercel.app). It is not affiliated with the PromptBud Chrome extension."
           }
         },
         {
@@ -1635,7 +1648,7 @@
           "name": "Who created PromptBud?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "PromptBud was created by Code Ronins, a team of 5 computer science students from India led by Ellen Iconoclust."
+            "text": "PromptBud was created by Code Ronins, a team led by Ellen Iconoclust including Karmughilan, Shahana Balakrishnan, Nishanth, and Soundarya."
           }
         }
       ]
